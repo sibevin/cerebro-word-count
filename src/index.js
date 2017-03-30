@@ -3,14 +3,23 @@
 const ICON_FILE = require('./icon.png');
 const WC_REGEX = /wc\s+(.*)/i;
 
-const plugin = ({term, display, actions}) => {
+const plugin = ({
+  term,
+  display,
+  actions
+}) => {
   if (WC_REGEX.test(term)) {
     let [, query] = WC_REGEX.exec(term);
-    let count = query.length;
+    let letterCount = query.length;
+    let wordCount = query.split(/(\s+)/)
+      .filter(function(e) {
+        return e.trim().length > 0;
+      })
+      .length;
     display({
-      icon:       ICON_FILE,
-      title:      `${count}`,
-      getPreview: () => `<div style="font-size: 2em;">${count} word(s)<br/>${query}</div>`
+      icon: ICON_FILE,
+      title: `Letters: ${letterCount} / Words: ${wordCount}`,
+      getPreview: () => `<div style="font-size: 2em;">Letters: ${letterCount} <br/>Words: ${wordCount}<hr/>${query}</div>`
     });
   }
 };
