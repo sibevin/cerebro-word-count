@@ -1,13 +1,16 @@
 {
-  "name": "cerebro-plugin",
-  "version": "1.0.0",
+  "name": "cerebro-word-count",
+  "version": "0.9.0",
   "description": "",
   "license": "MIT",
-  "repository": "KELiON/cerebro-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sibevin/cerebro-word-count.git"
+  },
   "author": {
-    "name": "Alexandr Subbotin",
-    "email": "kelionweb@gmail.com",
-    "url": "asubbotin.ru"
+    "name": "Sibevin Wang",
+    "email": "sibevin@gmail.com",
+    "url": "sibevin.github.io"
   },
   "engines": {
     "node": ">=4"
