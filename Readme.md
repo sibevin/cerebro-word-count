@@ -2,7 +2,7 @@
 
 A word count cerebro plugin.
 
-[](screenshot.git)
+![](screenshot.gif)
 
 ## Usage
 
