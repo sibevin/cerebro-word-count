@@ -2,6 +2,8 @@
 
 A word count cerebro plugin.
 
+[](screenshot.git)
+
 ## Usage
 
 ```
